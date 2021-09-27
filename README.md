@@ -73,7 +73,7 @@ ii.	즐겨찾기한 선생님이 온라인 상태가 되면 학생에게 카톡 
 ![event도출](https://user-images.githubusercontent.com/88808251/134918063-8df61b12-ba52-48a9-988c-ef84b2aaff3d.png)
 
 ### 부적격 이벤트 탈락
-![부적격event](https://user-images.githubusercontent.com/88808251/134918508-c31aa782-c80b-454c-a43f-e1df175ff5e7.png)
+![부적격event](https://user-images.githubusercontent.com/88808251/134919018-7c324b29-92a7-4fbf-8bcf-a12a572f0ae4.png)
 
 
 ### 액터, 커맨드 부착하여 읽기 좋게
