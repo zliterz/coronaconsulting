@@ -80,7 +80,7 @@ ii.	즐겨찾기한 선생님이 온라인 상태가 되면 학생에게 카톡 
 ![action](https://user-images.githubusercontent.com/88808251/134998195-ffd37bdc-a11b-42e0-ab0f-a0840ba082c4.png)
 
 ### 어그리게잇으로 묶기
-![aggregate](https://user-images.githubusercontent.com/88808251/133040968-2c8724f1-1129-47be-b78c-b01e15eb81ea.png)
+![aggregate](https://user-images.githubusercontent.com/88808251/134998585-1ae62a7e-d086-4a2f-b045-4532ba839fee.png)
 
 ### 바운디드 컨텍스트로 묶기
 ![boundedct](https://user-images.githubusercontent.com/88808251/133041492-4cfab21a-06fd-49ae-9841-68c9986f0495.png)
