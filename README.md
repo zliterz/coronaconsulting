@@ -86,7 +86,7 @@ ii.	즐겨찾기한 선생님이 온라인 상태가 되면 학생에게 카톡 
 ![boundedct](https://user-images.githubusercontent.com/88808251/134999161-d3fdf9e6-ed78-42ee-8aa9-477d602fbf13.png)
 
 ### 폴리시 부착 (괄호는 수행주체, 폴리시 부착을 둘째단계에서 해놔도 상관 없음. 전체 연계가 초기에 드러남)
-![policy](https://user-images.githubusercontent.com/88808251/133041754-0be6eedd-56d0-4938-bf12-4ea5eeff6ed6.png)
+![policy](https://user-images.githubusercontent.com/88808251/135000918-4030b4dd-b488-4fcb-8817-67a8f513048d.png)
 
 ### 폴리시의 이동과 컨텍스트 매핑 (점선은 Pub/Sub, 실선은 Req/Resp)
 ![policy_ct](https://user-images.githubusercontent.com/88808251/133172776-f1f634ae-e50b-4d90-824a-fc112c80fbba.png)
