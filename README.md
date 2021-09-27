@@ -83,7 +83,7 @@ ii.	즐겨찾기한 선생님이 온라인 상태가 되면 학생에게 카톡 
 ![aggregate](https://user-images.githubusercontent.com/88808251/134998585-1ae62a7e-d086-4a2f-b045-4532ba839fee.png)
 
 ### 바운디드 컨텍스트로 묶기
-![boundedct](https://user-images.githubusercontent.com/88808251/133041492-4cfab21a-06fd-49ae-9841-68c9986f0495.png)
+![boundedct](https://user-images.githubusercontent.com/88808251/134999161-d3fdf9e6-ed78-42ee-8aa9-477d602fbf13.png)
 
 ### 폴리시 부착 (괄호는 수행주체, 폴리시 부착을 둘째단계에서 해놔도 상관 없음. 전체 연계가 초기에 드러남)
 ![policy](https://user-images.githubusercontent.com/88808251/133041754-0be6eedd-56d0-4938-bf12-4ea5eeff6ed6.png)
