@@ -66,7 +66,7 @@ ii.	즐겨찾기한 선생님이 온라인 상태가 되면 학생에게 카톡 
 ![tobe](https://user-images.githubusercontent.com/89369983/132091699-2f0f9164-55da-49d5-a35f-dc6eba7eed19.PNG)
 
 ## Event Storming 결과
-* MSAEz 로 모델링한 이벤트스토밍 결과:  http://www.msaez.io/#/storming/CWH9U9ZXJmRVhWyyz88s1h12bLz1/2d59a42bf5bfa04dfeb58737179ef00f
+* MSAEz 로 모델링한 이벤트스토밍 결과:  https://labs.msaez.io/#/storming/oRS26n0xXJVnWLBNfmup2aNvFtb2/3a5c2c0715fca64cfc1fcd833bbb2858
 
 
 ### 이벤트 도출
