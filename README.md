@@ -77,7 +77,7 @@ ii.	즐겨찾기한 선생님이 온라인 상태가 되면 학생에게 카톡 
 
 
 ### 액터, 커맨드 부착하여 읽기 좋게
-![action](https://user-images.githubusercontent.com/88808251/133040781-18dfdfb8-c608-4b80-83cb-f1583f7efbea.png)
+![action](https://user-images.githubusercontent.com/88808251/134998195-ffd37bdc-a11b-42e0-ab0f-a0840ba082c4.png)
 
 ### 어그리게잇으로 묶기
 ![aggregate](https://user-images.githubusercontent.com/88808251/133040968-2c8724f1-1129-47be-b78c-b01e15eb81ea.png)
