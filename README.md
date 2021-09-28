@@ -295,30 +295,22 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: Rental
+        - id: Request
           uri: http://localhost:8081
           predicates:
-            - Path=/rentals/** 
-        - id: Book
+            - Path=/requests/** 
+        - id: Consulting
           uri: http://localhost:8082
           predicates:
-            - Path=/books/** 
-        - id: Payment
+            - Path=/consultings/** 
+        - id: Teacher
           uri: http://localhost:8083
           predicates:
-            - Path=/payments/** 
-        - id: Alert
+            - Path=/teachers/** 
+        - id: MyPage
           uri: http://localhost:8084
           predicates:
-            - Path=/alerts/** 
-        - id: View
-          uri: http://localhost:8085
-          predicates:
-            - Path= /mypages/**
-        - id: Point
-          uri: http://localhost:8086
-          predicates:
-            - Path=/points/** 
+            - Path= /myPages/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -338,30 +330,22 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: Rental
-          uri: http://Rental:8080
+        - id: Request
+          uri: http://Request:8080
           predicates:
-            - Path=/rentals/** 
-        - id: Book
-          uri: http://Book:8080
+            - Path=/requests/** 
+        - id: Consulting
+          uri: http://Consulting:8080
           predicates:
-            - Path=/books/** 
-        - id: Payment
-          uri: http://Payment:8080
+            - Path=/consultings/** 
+        - id: Teacher
+          uri: http://Teacher:8080
           predicates:
-            - Path=/payments/** 
-        - id: Alert
-          uri: http://Alert:8080
+            - Path=/teachers/** 
+        - id: MyPage
+          uri: http://MyPage:8080
           predicates:
-            - Path=/alerts/** 
-        - id: View
-          uri: http://View:8080
-          predicates:
-            - Path= /mypages/**
-        - id: Point
-          uri: http://Point:8080
-          predicates:
-            - Path=/points/** 
+            - Path= /myPages/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -375,7 +359,6 @@ spring:
 
 server:
   port: 8080
-
 ```
 ## CQRS 적용
 mypage(View)는 Materialized View로 구현하여, 타 마이크로서비스의 데이터 원본에 Join SQL 등 구현 없이도 내 서비스의 화면 구성과 잦은 조회가 가능하게 구현 하였음.
