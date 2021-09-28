@@ -583,10 +583,10 @@ $ kubectl autoscale deploy request --min=1 --max=10 --cpu-percent=15
 
 서비스에 Traffic 유입(siege를 통해 워크로드 발생)
 
-![image](https://user-images.githubusercontent.com/89369983/133118622-1a8e337b-b522-44fa-81c2-4b67877144d3.png)
+![image](https://user-images.githubusercontent.com/88808251/135136956-f56248e9-5f14-4a53-8ae6-b23d0db6cf26.png)
 
 부하테스트 결과 HPA 반영
-![image](https://user-images.githubusercontent.com/89369983/133118351-4315f1b0-85b9-46ea-b23a-9d90ac21f6d5.png)
+![image](https://user-images.githubusercontent.com/88808251/135136863-1de5f0d4-7bed-4382-a60e-0f5e05ea2e43.png)
 
 ## Circuit Breaker
   * Istio 다운로드 및 PATH 추가, 설치
