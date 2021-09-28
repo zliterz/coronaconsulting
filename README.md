@@ -585,7 +585,7 @@ $ kubectl autoscale deploy request --min=1 --max=10 --cpu-percent=15
 
 ![image](https://user-images.githubusercontent.com/88808251/135136956-f56248e9-5f14-4a53-8ae6-b23d0db6cf26.png)
 
-부하테스트 결과 HPA 반영
+부하테스트 결과 HPA 반영  
 ![image](https://user-images.githubusercontent.com/88808251/135136863-1de5f0d4-7bed-4382-a60e-0f5e05ea2e43.png)
 
 ## Circuit Breaker
