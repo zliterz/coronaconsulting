@@ -562,11 +562,11 @@ kubectl apply -f service.yaml
 
 configmap 설정 및 소스 반영
 
-![image](https://user-images.githubusercontent.com/89369983/133117696-5f3b4fd7-e850-4caa-901b-b3171baca69b.png)
+![image](https://user-images.githubusercontent.com/88808251/135128231-c955161c-0761-4b57-aa36-a46dc4909edd.png)
 
 configmap 구성 내용 조회
 
-![image](https://user-images.githubusercontent.com/89369983/133117908-934c3b40-99a2-4905-9963-6692d6c82a28.png)
+![image](https://user-images.githubusercontent.com/88808251/135126592-878fcb79-ee1e-4fa2-9796-3621ef064d20.png)
 
 
 ## Autoscale (HPA)
