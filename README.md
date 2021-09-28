@@ -407,7 +407,7 @@ mypage 서비스의 DB와 Rental/Payment/Point 서비스의 DB를 다른 DB를 �
 
 |서비스|DB|pom.xml|
 | :--: | :--: | :--: |
-|Rental| H2 |![image](https://user-images.githubusercontent.com/2360083/121104579-4f10e680-c83d-11eb-8cf3-002c3d7ff8dc.png)|
+|Rental| H2 |![image](https://user-images.githubusercontent.com/88808251/135046054-5bfa2e3a-63d0-453c-ac8b-e9c678a9ff0c.png)|
 |Payment| H2 |![image](https://user-images.githubusercontent.com/2360083/121104579-4f10e680-c83d-11eb-8cf3-002c3d7ff8dc.png)|
 |Point| H2 |![image](https://user-images.githubusercontent.com/2360083/121104579-4f10e680-c83d-11eb-8cf3-002c3d7ff8dc.png)|
 |MyPage| HSQL |![image](https://user-images.githubusercontent.com/88808251/135045637-045ab8d9-683c-4314-b39b-1418a5032cd7.png)|
