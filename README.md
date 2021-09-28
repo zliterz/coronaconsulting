@@ -573,12 +573,12 @@ configmap 구성 내용 조회
 프로모션 등으로 사용자 유입이 급격한 증가시 안정적인 운영을 위해 Rental 자동화된 확장 기능을 적용 함
 
 Resource 설정 및 유입전 현황 
-![image](https://user-images.githubusercontent.com/89369983/133118106-ab6141ad-bd66-40bd-a14c-bcf21ecf5e23.png)
+![image](https://user-images.githubusercontent.com/88808251/135133397-4e2796d5-aaf2-43e8-8a33-191fa7b63c45.png)
 
-- rental 서비스에 대한 replica 를 동적으로 늘려주도록 HPA 를 설정(CPU 사용량이 15프로를 넘어서면 replica 를 10개까지 늘리도록 설정)
+- request 서비스에 대한 replica 를 동적으로 늘려주도록 HPA 를 설정(CPU 사용량이 15프로를 넘어서면 replica 를 10개까지 늘리도록 설정)
 
 ```sh
-$ kubectl autoscale deploy booking --min=1 --max=10 --cpu-percent=15
+$ kubectl autoscale deploy request --min=1 --max=10 --cpu-percent=15
 ```
 
 서비스에 Traffic 유입(siege를 통해 워크로드 발생)
