@@ -514,30 +514,30 @@ rental 서비스에서 주문을 수신하게 작성되어 있다.
 ```sh
 
 cd gateway
-az acr build --registry rentbook --image grp03.azurecr.io/gateway:latest .
+az acr build --registry rentbook --image user1010.azurecr.io/gateway:latest .
 
 cd kubernetes
 kubectl apply -f deployment.yml
 kubectl apply -f service.yaml
 
 cd ..
-cd Rental
-az acr build --registry rentbook --image grp03.azurecr.io/rental:latest .
+cd Request
+az acr build --registry rentbook --image user1010.azurecr.io/rental:latest .
 
 cd kubernetes
 kubectl apply -f deployment.yml
 kubectl apply -f service.yaml
 
 cd ..
-cd Point
-az acr build --registry rentbook --image grp03.azurecr.io/point:latest .
+cd Consulting
+az acr build --registry rentbook --image user1010.azurecr.io/point:latest .
 
 cd kubernetes
 kubectl apply -f deployment.yml
 kubectl apply -f service.yaml
 
 cd ..
-cd Payment
+cd Teacher
 az acr build --registry rentbook --image grp03.azurecr.io/payment:latest .
 
 cd kubernetes
@@ -546,21 +546,13 @@ kubectl apply -f service.yaml
 
 
 cd ..
-cd book
-az acr build --registry rentbook --image grp03.azurecr.io/book:latest .
+cd MyPage
+az acr build --registry rentbook --image user1010.azurecr.io/book:latest .
 
 cd kubernetes
 kubectl apply -f deployment.yml
 kubectl apply -f service.yaml
 
-
-cd ..
-cd View
-az acr build --registry rentbook --image grp03.azurecr.io/view:latest .
-
-cd kubernetes
-kubectl apply -f deployment.yml
-kubectl apply -f service.yaml
 
 ```
 
