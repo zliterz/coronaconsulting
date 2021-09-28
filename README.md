@@ -95,8 +95,8 @@ ii.	즐겨찾기한 선생님이 온라인 상태가 되면 학생에게 카톡 
 ![complete](https://user-images.githubusercontent.com/88808251/135001570-01184fec-b58b-4e45-9d26-7356fad095b8.png)
 
 ### 1차 완성본에 대한 기능적/비기능적 요구사항을 커버하는지 검증
-![검증1](https://user-images.githubusercontent.com/88808251/133179151-31b820fe-0863-436a-9090-51b9a7f372ea.png)
-![검증2](https://user-images.githubusercontent.com/88808251/133173230-9f45a13a-2d64-4475-99ae-87cb756e0706.png)
+![검증1](https://user-images.githubusercontent.com/88808251/135002618-f0c1dfe1-4349-40f4-9480-98e30ca94bc4.png)
+![검증2](https://user-images.githubusercontent.com/88808251/135002555-e8b6c1fd-07ec-49cb-9c0f-158f0d4b8591.png)
 
 
 ## 헥사고날 아키텍처 다이어그램 도출
