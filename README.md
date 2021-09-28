@@ -92,7 +92,7 @@ ii.	즐겨찾기한 선생님이 온라인 상태가 되면 학생에게 카톡 
 ![policy_ct](https://user-images.githubusercontent.com/88808251/135001394-d736343e-5ab0-4eef-a821-347ba02ab7c5.png)
 
 ### 완성된 1차 모형
-![complete](https://user-images.githubusercontent.com/88808251/133172930-a879c2ec-9439-4089-850f-03853375e5e2.png)
+![complete](https://user-images.githubusercontent.com/88808251/135001570-01184fec-b58b-4e45-9d26-7356fad095b8.png)
 
 ### 1차 완성본에 대한 기능적/비기능적 요구사항을 커버하는지 검증
 ![검증1](https://user-images.githubusercontent.com/88808251/133179151-31b820fe-0863-436a-9090-51b9a7f372ea.png)
