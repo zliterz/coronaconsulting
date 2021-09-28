@@ -522,7 +522,7 @@ kubectl apply -f service.yaml
 
 cd ..
 cd Request
-az acr build --registry rentbook --image user1010.azurecr.io/rental:latest .
+az acr build --registry rentbook --image user1010.azurecr.io/request:latest .
 
 cd kubernetes
 kubectl apply -f deployment.yml
@@ -530,7 +530,7 @@ kubectl apply -f service.yaml
 
 cd ..
 cd Consulting
-az acr build --registry rentbook --image user1010.azurecr.io/point:latest .
+az acr build --registry rentbook --image user1010.azurecr.io/consulting:latest .
 
 cd kubernetes
 kubectl apply -f deployment.yml
@@ -538,7 +538,7 @@ kubectl apply -f service.yaml
 
 cd ..
 cd Teacher
-az acr build --registry rentbook --image grp03.azurecr.io/payment:latest .
+az acr build --registry rentbook --image grp03.azurecr.io/teacher:latest .
 
 cd kubernetes
 kubectl apply -f deployment.yml
@@ -547,7 +547,7 @@ kubectl apply -f service.yaml
 
 cd ..
 cd MyPage
-az acr build --registry rentbook --image user1010.azurecr.io/book:latest .
+az acr build --registry rentbook --image user1010.azurecr.io/mypage:latest .
 
 cd kubernetes
 kubectl apply -f deployment.yml
