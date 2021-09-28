@@ -410,7 +410,7 @@ mypage 서비스의 DB와 Rental/Payment/Point 서비스의 DB를 다른 DB를 �
 |Rental| H2 |![image](https://user-images.githubusercontent.com/2360083/121104579-4f10e680-c83d-11eb-8cf3-002c3d7ff8dc.png)|
 |Payment| H2 |![image](https://user-images.githubusercontent.com/2360083/121104579-4f10e680-c83d-11eb-8cf3-002c3d7ff8dc.png)|
 |Point| H2 |![image](https://user-images.githubusercontent.com/2360083/121104579-4f10e680-c83d-11eb-8cf3-002c3d7ff8dc.png)|
-|MyPage| HSQL |![image](https://user-images.githubusercontent.com/2360083/120982836-1842be00-c7b4-11eb-91de-ab01170133fd.png)|
+|MyPage| HSQL |![image](https://user-images.githubusercontent.com/88808251/135045637-045ab8d9-683c-4314-b39b-1418a5032cd7.png)|
 
 
 ## 동기식 호출과 Fallback 처리
