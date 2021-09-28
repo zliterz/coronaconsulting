@@ -384,9 +384,9 @@ mypage 서비스의 DB와 Rental/Payment/Point 서비스의 DB를 다른 DB를 �
 
 |서비스|DB|pom.xml|
 | :--: | :--: | :--: |
-|Rental| H2 |![image](https://user-images.githubusercontent.com/88808251/135046054-5bfa2e3a-63d0-453c-ac8b-e9c678a9ff0c.png)|
-|Payment| H2 |![image](https://user-images.githubusercontent.com/88808251/135046054-5bfa2e3a-63d0-453c-ac8b-e9c678a9ff0c.png)|
-|Point| H2 |![image](https://user-images.githubusercontent.com/88808251/135046054-5bfa2e3a-63d0-453c-ac8b-e9c678a9ff0c.png)|
+|Request| H2 |![image](https://user-images.githubusercontent.com/88808251/135046054-5bfa2e3a-63d0-453c-ac8b-e9c678a9ff0c.png)|
+|Consulting| H2 |![image](https://user-images.githubusercontent.com/88808251/135046054-5bfa2e3a-63d0-453c-ac8b-e9c678a9ff0c.png)|
+|Teacher| H2 |![image](https://user-images.githubusercontent.com/88808251/135046054-5bfa2e3a-63d0-453c-ac8b-e9c678a9ff0c.png)|
 |MyPage| HSQL |![image](https://user-images.githubusercontent.com/88808251/135045637-045ab8d9-683c-4314-b39b-1418a5032cd7.png)|
 
 
