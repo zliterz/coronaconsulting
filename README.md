@@ -89,7 +89,7 @@ ii.	즐겨찾기한 선생님이 온라인 상태가 되면 학생에게 카톡 
 ![policy](https://user-images.githubusercontent.com/88808251/135000918-4030b4dd-b488-4fcb-8817-67a8f513048d.png)
 
 ### 폴리시의 이동과 컨텍스트 매핑 (점선은 Pub/Sub, 실선은 Req/Resp)
-![policy_ct](https://user-images.githubusercontent.com/88808251/133172776-f1f634ae-e50b-4d90-824a-fc112c80fbba.png)
+![policy_ct](https://user-images.githubusercontent.com/88808251/135001394-d736343e-5ab0-4eef-a821-347ba02ab7c5.png)
 
 ### 완성된 1차 모형
 ![complete](https://user-images.githubusercontent.com/88808251/133172930-a879c2ec-9439-4089-850f-03853375e5e2.png)
