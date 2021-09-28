@@ -104,7 +104,7 @@ ii.	즐겨찾기한 선생님이 온라인 상태가 되면 학생에게 카톡 
     - 호출관계에서 PubSub 과 Req/Resp 를 구분함
     - 서브 도메인과 바운디드 컨텍스트의 분리
     
-![image](https://user-images.githubusercontent.com/89369983/133120467-3a6f40a2-3658-44b0-9064-e5b7c6ffbf6c.png)
+![image](https://user-images.githubusercontent.com/88808251/135005740-574f1c77-e9aa-4d39-bda0-b6c2c8498444.png)
 
 
 
