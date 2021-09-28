@@ -63,7 +63,7 @@ ii.	즐겨찾기한 선생님이 온라인 상태가 되면 학생에게 카톡 
 ![image](https://user-images.githubusercontent.com/89369983/133180330-14093197-2864-4b9c-8e5b-6ec6555e49f5.png)
 
 ## TO-BE 조직 (Vertically-Aligned)
-![tobe](https://user-images.githubusercontent.com/89369983/132091699-2f0f9164-55da-49d5-a35f-dc6eba7eed19.PNG)
+![tobe](https://user-images.githubusercontent.com/88808251/135012695-46b05be3-79f2-4af3-a99f-9eee6e6dd855.png)
 
 ## Event Storming 결과
 * MSAEz 로 모델링한 이벤트스토밍 결과:  https://labs.msaez.io/#/storming/oRS26n0xXJVnWLBNfmup2aNvFtb2/3a5c2c0715fca64cfc1fcd833bbb2858
