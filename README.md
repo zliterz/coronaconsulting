@@ -553,8 +553,8 @@ cd kubernetes
 kubectl apply -f deployment.yml
 kubectl apply -f service.yaml
 
-
 ```
+![image](https://user-images.githubusercontent.com/88808251/135107129-25fd1f90-e2dd-4a8d-af12-16bb4ba6b333.png)
 
 ## Config Map
 - 변경 가능성이 있는 항목은 ConfigMap을 사용하여 설정 변경 할수 있도록 구성   
