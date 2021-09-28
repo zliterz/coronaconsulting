@@ -110,25 +110,19 @@ ii.	즐겨찾기한 선생님이 온라인 상태가 되면 학생에게 카톡 
 
 # 구현
 
-분석/설계 단계에서 도출된 헥사고날 아키텍처에 따라,구현한 각 서비스를 로컬에서 실행하는 방법은 아래와 같다 (각자의 포트넘버는 8081 ~ 8086이다)
+분석/설계 단계에서 도출된 헥사고날 아키텍처에 따라,구현한 각 서비스를 로컬에서 실행하는 방법은 아래와 같다 (각자의 포트넘버는 8081 ~ 8084이다)
 
 ```shell
-cd book
+cd Request
 mvn spring-boot:run
 
-cd payment
+cd Consulting
 mvn spring-boot:run 
 
-cd point
+cd Teacher
 mvn spring-boot:run 
 
-cd rental 
-mvn spring-boot:run
-
-cd mypage 
-mvn spring-boot:run
-
-cd alert 
+cd MyPage 
 mvn spring-boot:run
 
 cd gateway
