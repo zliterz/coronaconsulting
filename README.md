@@ -132,11 +132,11 @@ mvn spring-boot:run
 msaez Event-Storming을 통해 구현한 Aggregate 단위로 Entity 를 정의 하였으며,
 Entity Pattern 과 Repository Pattern을 적용하기 위해 Spring Data REST 의 RestRepository 를 적용하였다.
 
-Bookrental 서비스의 rental.java
+Request 서비스의 Request.java
 
 ```java
 
-package book.rental.system;
+package coronaconsulting;
 
 import javax.persistence.*;
 import org.springframework.beans.BeanUtils;
@@ -144,75 +144,80 @@ import java.util.List;
 import java.util.Date;
 
 @Entity
-@Table(name="Rental_table")
-public class Rental {
+@Table(name="Request_table")
+public class Request {
 
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
-    private Long rentalId;
-    private Integer bookId;
-    private String bookName;
-    private Integer price;
-    private Date startDate;
-    private Date returnDate;
-    private Integer customerId;
-    private String customerPhoneNo;
-    private String rentStatus;
+    private Long requestId;
+    private Long studentId;
+    private String studentName;
+    private Long teacherId;
 
     @PostPersist
     public void onPostPersist(){
+        ConsultingRequested consultingRequested = new ConsultingRequested();
+        BeanUtils.copyProperties(this, consultingRequested);
+        consultingRequested.publishAfterCommit();
 
-        //  서적 대여 시 상태변경 후 Publish 
-        BookRented bookRented = new BookRented();
-        BeanUtils.copyProperties(this, bookRented);
-        bookRented.publishAfterCommit();
+
+        coronaconsulting.external.Consulting consulting = new coronaconsulting.external.Consulting();
+        // mappings goes here
+        RequestApplication.applicationContext.getBean(coronaconsulting.external.ConsultingService.class)
+            .consultingStart(consulting);
+
+        TeacherBookmarked teacherBookmarked = new TeacherBookmarked();
+        BeanUtils.copyProperties(this, teacherBookmarked);
+        teacherBookmarked.publishAfterCommit();
+
+        MessageSent messageSent = new MessageSent();
+        BeanUtils.copyProperties(this, messageSent);
+        messageSent.publishAfterCommit();
 
     }
 
-    @PostUpdate 
-    public void onPostUpdate(){
-
-        if("RETURN".equals(this.rentStatus)){           // 반납 처리 Publish
-            BookReturned bookReturned = new BookReturned();
-            BeanUtils.copyProperties(this, bookReturned);
-            bookReturned.publishAfterCommit();
-
-        } else if("DELAY".equals(this.rentStatus)){     // 반납지연 Publish
-            ReturnDelayed returnDelayed = new ReturnDelayed();
-            BeanUtils.copyProperties(this, returnDelayed);
-            returnDelayed.publishAfterCommit();
-        }
-    }    
-
-    public Long getRentalId() {
-        return rentalId;
+    public Long getRequeestId() {
+        return requestId;
     }
 
-    public void setRentalId(Long rentalId) {
-        this.rentalId = rentalId;
+    public void setRequeestId(Long requeestId) {
+        this.requestId = requeestId;
     }
-    public Integer getBookId() {
-        return bookId;
+    public Long getStudentId() {
+        return studentId;
     }
 
-    public void setBookId(Integer bookId) {
-        this.bookId = bookId;
+    public void setStudentId(Long studentId) {
+        this.studentId = studentId;
     }
-    public String getBookName() {
-        return bookName;
+    public String getStudentName() {
+        return studentName;
     }
-    .. getter/setter Method 생략
+
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
+    }
+    public Long getTeacherId() {
+        return teacherId;
+    }
+
+    public void setTeacherId(Long teacherId) {
+        this.teacherId = teacherId;
+    }
+
+
+
+
+}
 ```
 
- Payment 서비스의 PolicyHandler.java
- rental 완료시 Payment 이력을 처리한다.
+ Teacher 서비스의 PolicyHandler.java
+ Bookmark 완료시 Bookmark 이력을 처리한다.
+
 ```java
-package book.rental.system;
+package coronaconsulting;
 
-import book.rental.system.config.kafka.KafkaProcessor;
-
-import java.util.Optional;
-
+import coronaconsulting.config.kafka.KafkaProcessor;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -222,26 +227,65 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PolicyHandler{
-    @Autowired PaymentRepository paymentRepository;
+    @Autowired TeacherRepository teacherRepository;
 
     @StreamListener(KafkaProcessor.INPUT)
-    public void wheneverBookRented_PayPoint(@Payload BookRented bookRented){
+    public void wheneverConsultingEnded_StatusChange(@Payload ConsultingEnded consultingEnded){
 
-        if(!bookRented.validate()) return;
+        if(!consultingEnded.validate()) return;
 
-        if("RENT".equals(bookRented.getRentStatus())){
+        System.out.println("\n\n##### listener StatusChange : " + consultingEnded.toJson() + "\n\n");
 
-            Payment payment =new Payment();
 
-            payment.setBookId(bookRented.getBookid());
-            payment.setCustomerId(bookRented.getCustomerId());
-            payment.setPrice(bookRented.getPrice());
-            payment.setRentalId(bookRented.getRentalId());
-            paymentRepository.save(payment);
-        }else{
-            System.out.println("\n\n##### listener PayPoint Process Failed : Status -->" +bookRented.getRentStatus() + "\n\n");
-        }
+
+        // Sample Logic //
+        // Teacher teacher = new Teacher();
+        // teacherRepository.save(teacher);
+
     }
+    @StreamListener(KafkaProcessor.INPUT)
+    public void wheneverConsultingStarted_StatusChange(@Payload ConsultingStarted consultingStarted){
+
+        if(!consultingStarted.validate()) return;
+
+        System.out.println("\n\n##### listener StatusChange : " + consultingStarted.toJson() + "\n\n");
+
+
+
+        // Sample Logic //
+        // Teacher teacher = new Teacher();
+        // teacherRepository.save(teacher);
+
+    }
+    @StreamListener(KafkaProcessor.INPUT)
+    public void wheneverTeacherBookmarked_BookmarkIncrease(@Payload TeacherBookmarked teacherBookmarked){
+
+        if(!teacherBookmarked.validate()) return;
+
+        System.out.println("\n\n##### listener BookmarkIncrease : " + teacherBookmarked.toJson() + "\n\n");
+
+
+
+        // Sample Logic //
+        // Teacher teacher = new Teacher();
+        // teacherRepository.save(teacher);
+
+    }
+    @StreamListener(KafkaProcessor.INPUT)
+    public void wheneverConsultingEnded_ConsultingIncrease(@Payload ConsultingEnded consultingEnded){
+
+        if(!consultingEnded.validate()) return;
+
+        System.out.println("\n\n##### listener ConsultingIncrease : " + consultingEnded.toJson() + "\n\n");
+
+
+
+        // Sample Logic //
+        // Teacher teacher = new Teacher();
+        // teacherRepository.save(teacher);
+
+    }
+
 
 
     @StreamListener(KafkaProcessor.INPUT)
@@ -250,22 +294,6 @@ public class PolicyHandler{
 
 }
 
-```
-
- BookRental 서비스의 RentalRepository.java
-
-
-```java
-package book.rental.system;
-
-import org.springframework.data.repository.PagingAndSortingRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-
-@RepositoryRestResource(collectionResourceRel="rentals", path="rentals")
-public interface RentalRepository extends PagingAndSortingRepository<Rental, Long>{
-
-
-}
 ```
 
 ## 적용 후 REST API 의 테스트
