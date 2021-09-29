@@ -496,7 +496,8 @@ $ kubectl autoscale deploy request --min=1 --max=10 --cpu-percent=15
   * Liveness Probe 설정 및 restart 시도 점검을 위해 잘못된값 설정으로 변경 후 RESTARTS 처리 테스트 결과
   - 설정전, restart 횟수 증가
 ![image](https://user-images.githubusercontent.com/88808251/135204058-61a24185-0cb0-43ab-8357-d9d205caed2e.png)  
-- 설정후, 설정전의 Pod는 리스타트 끝에 CrashLoopBackOff, 새로 생성한 Pod는 정상 Running
+
+  - 설정후, 설정전의 Pod는 리스타트 끝에 CrashLoopBackOff, 새로 생성한 Pod는 정상 Running
 ![image](https://user-images.githubusercontent.com/88808251/135204339-72db98ee-96d3-49d7-ae49-894de9a1b0cf.png)
 ![image](https://user-images.githubusercontent.com/88808251/135204329-fc380e72-e1a4-4c96-bd68-bdd8cf8a456f.png)
 ![image](https://user-images.githubusercontent.com/88808251/135204346-2ca3a7b3-9792-4603-8f74-0f6d015ce8dc.png)
