@@ -472,7 +472,9 @@ $ kubectl autoscale deploy request --min=1 --max=10 --cpu-percent=15
 ## Circuit Breaker
   * Istio 다운로드 및 PATH 추가, 설치
   * rentbook namespace에 Istio주입
+  * istio yaml파일로 설치
 ![image](https://user-images.githubusercontent.com/88808251/135148262-9b004236-72f6-4131-b97d-b3d829b14c26.png)
+![image](https://user-images.githubusercontent.com/88808251/135203705-8ea220f7-d143-4bb0-acc0-e9f9ad65f8ec.png)
 
   * Transaction이 과도할 경우 Circuit Breaker 를 통하여 장애격리 처리
 ![image](https://user-images.githubusercontent.com/88808251/135203482-c76e5011-582c-4721-89b2-672ac8ff2f03.png)
